@@ -1,0 +1,13 @@
+FILE DOVE SCRIVO LE QUERY LE PROVO SU DB E LE METTO NEL PROGRAMMA
+
+SELECT Localita, AVG(Umidita)
+FROM situazione
+WHERE MONTH(Data)=3
+GROUP BY Localita
+
+SELECT s.Localita, s.Umidita
+FROM situazione s
+WHERE DAY(s.Data)<=15
+AND MONTH(s.Data)=4
+ORDER BY s.Data ASC
+
